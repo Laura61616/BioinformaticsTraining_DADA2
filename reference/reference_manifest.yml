@@ -1,0 +1,53 @@
+reference_name: Tele02 12S DADA2 training references
+reference_version: 1
+generated_on: 2026-11-08
+source_files:
+  fasta:
+    filename: Tele02_.fasta
+    sha256: 0baee131f22e7fa1cae3b20b4a020a00089f6cfa26137b5f0c59ef582db24a36
+    included_in_training_project: false
+  taxonomy_mapping:
+    filename: Tele02_taxonomy.txt
+    sha256: d66f9f52d71559c7cb16ea84f2fa6c99ecf7c82195d6c62831c7d6e15960275f
+    included_in_training_project: false
+source_origin: needs_input
+redistribution_license: needs_input
+source_validation:
+  fasta_records: 11096
+  taxonomy_rows: 11096
+  accession_sets_match: true
+  minimum_sequence_length_bp: 127
+  maximum_sequence_length_bp: 350
+  median_sequence_length_bp: 168.0
+  sequences_120_to_220_bp: 11079
+  sequences_with_N: 157
+  sequences_with_non_ACGT: 196
+  complete_seven_rank_taxonomy_records: 10604
+primer_free_assessment:
+  exact_forward_primer_at_sequence_start: 0
+  exact_reverse_primer_reverse_complement_at_sequence_end: 0
+  interpretation: "No exact terminal Tele02 primer matches indicates that source records are treated as primer-free target sequences."
+outputs:
+  taxonomy:
+    filename: tele02_dada2_taxonomy.fa.gz
+    format: "DADA2 assignTaxonomy training FASTA"
+    records: 10393
+    sha256: 869e76734018606ab14a8bd88111f641336f422a16e91a6f0a013354e2016f10
+    filters:
+      - complete_seven_rank_taxonomy
+      - acgt_only
+      - length_120_to_220_bp
+    dada2_read_test: passed
+  species:
+    filename: tele02_dada2_species.fa.gz
+    format: "DADA2 assignSpecies exact-match FASTA"
+    records: 10058
+    sha256: 21fc582a156ed0202190dfeb7859307a7b5631ab465bb9c3145fda0cc566fcde
+    filters:
+      - valid_genus_and_binomial_species
+      - acgt_only
+      - length_120_to_220_bp
+      - exclude_sequence_to_multiple_species_conflicts
+    conflicting_sequence_groups_excluded: 0
+    dada2_read_test: passed
+orientation: "Source order and sequence orientation retained; no reverse complementation applied."

@@ -1,0 +1,9 @@
+.Rhistory
+.RData
+.Rproj.user/
+.DS_Store
+Thumbs.db
+
+# Recreated by the training pipeline
+results/trimmed/
+results/filtered/

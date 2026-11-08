@@ -1,0 +1,3 @@
+sample_id	raw	primer_removed	filtered	denoised_forward	denoised_reverse	merged	non_chimeric	target_length
+SAM001	2e+05	169384	154944	154646	154602	151992	151591	151369
+SAM002	2e+05	142393	128115	127866	127800	126779	126736	126624
