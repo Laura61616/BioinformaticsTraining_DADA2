@@ -11,7 +11,7 @@ edna-training-repo/
 |-- README.md
 |-- edna-training-repo.Rproj
 |-- data/                         # Training FASTQ files and sample information
-|-- reference/                    # Standardized DADA2 reference FASTA files
+|-- reference/                    # Standardized DADA2 reference FASTA files for vertebrates based on the Tele02 primer set; mammalian sequences are excluded to reduce file size
 |-- scripts/
 |   `-- tele02_dada2_training.R  # The only R script
 |-- results/                      # Result tables and intermediate FASTQ files
